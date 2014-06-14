@@ -37,5 +37,6 @@ gameOverText.attr({
             fill: 'darkred'
         });
         isAnimationRunning = false;
+        location.reload(true);
     });
 
