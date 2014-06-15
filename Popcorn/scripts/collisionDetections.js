@@ -25,6 +25,28 @@
     }
 }
 
+function bulletHitBrickCollision(bullet) {
+    var currentStage = bullet.getStage()
+    if (currentStage) {
+        var collisionObject = currentStage.getIntersection({ x: bullet.getX(), y: bullet.getY() });
+
+        if (collisionObject) {
+            if (collisionObject.getAttr('gameObjectType') == 'brick') {
+                bullet.remove();
+                levelBrickCount -= 1;
+                playerScore += 10;
+                updateScore();
+                if (collisionObject.getAttr('isObjectProducer')) {
+                    var newGift = spawnGift(collisionObject.getAttr('x'), collisionObject.getAttr('y'), collisionObject.getAttr('fill'), collisionObject.getAttr('producedObjectType'));
+                    var moveGiftDown = newGift.attrs.move;
+                    moveGiftDown();
+                }
+                collisionObject.remove();
+            }
+        }
+    }
+}
+
 //Can add this method to ball or circle object. Now it is just for testing.
 function ballHitWallDetection(ball) {
     var ballX = ball.attrs.x,
