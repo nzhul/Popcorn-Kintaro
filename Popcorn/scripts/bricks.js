@@ -32,7 +32,7 @@ function initBricks() {
                     gameObjectType: 'brick'
                 });
             if(currentBrick.getAttr('isObjectProducer')){
-                currentBrick.setAttr('producedObjectType', PRODUCIBLE_OBJECTS[getRandomInt(0, PRODUCIBLE_OBJECTS.length - 1)]);
+                currentBrick.setAttr('producedObjectType', PRODUCIBLE_OBJECTS[0]);//getRandomInt(0, PRODUCIBLE_OBJECTS.length - 1)]);
                 var currProducedObject = currentBrick.getAttr('producedObjectType');
                 currentBrick.fill(currProducedObject.color);
             }

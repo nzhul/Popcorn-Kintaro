@@ -29,6 +29,7 @@ function spawnGift(x, y, color, type) {
                     aPaddle.setAttrs({
                         paddleType: gift.getAttr('giftType')
                     });
+                    shotsLeft = 5;
                     var bonusText = new Kinetic.Text({
                         x: 15,
                         y: STAGE_HEIGHT - 30,
