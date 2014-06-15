@@ -122,11 +122,43 @@ var anim = new Kinetic.Animation(function (frame) {
     aBall.move();
     ballHitWallDetection(aBall);
     ballHitBrickDetection(aBall);
+
+    if (levelBrickCount == 0){
+        gameWin();
+    }
 }, layers, explosionsLayer); // !
 
 document.getElementById('start-btn').addEventListener('click', onStartBtnClick);
 document.getElementById('pause-btn').addEventListener('click', onPauseBtnClick);
 document.getElementById('best-scores-btn').addEventListener('click', onScoreBtnClick);
+
+//TO DO
+function gameWin(){
+    anim.stop();
+}
+
+function endGame(){
+    anim.stop();
+    gameOverText.animate(textAnimBigger);
+    var canvases = document.getElementsByTagName('canvas');
+
+    for (var i = 0; i < canvases.length; i += 1) {
+        canvases[i].style.zIndex = '1';
+    }
+
+    setTimeout(function(){
+        var currentName = prompt('Your socre is: '+ playerScore + '! Please enter your name:');
+        if (currentName === '') {
+            currentName = 'Anonymous';
+        }
+        else if (currentName === null) {
+            currentName = 'Anonymous';
+        }
+        localStorage.setItem(playerScore, currentName);
+        updateTopScores();
+    }, 1500);
+
+}
 
 function onStartBtnClick() {
     document.getElementById('container').addEventListener('click', onClickStartGame);

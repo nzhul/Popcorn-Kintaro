@@ -6,6 +6,7 @@
         if (collisionObject.getAttr('gameObjectType') == 'brick') {
             playSingleSound('explosionSound');
             collisionObject.remove();
+            levelBrickCount -= 1;
             explode();
             playerScore += 10 * getRandomNumber(25, 75);
             updateScore();

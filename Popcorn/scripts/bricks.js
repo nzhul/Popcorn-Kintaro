@@ -6,6 +6,7 @@ function initBricks() {
         currentBrick,
         verticalShift = 0,
         horizontalShift = 0;
+    levelBrickCount = Math.floor(brickCount) * BRICK_ROW_COUNT + 1;
 
     for (i = 0; i < BRICK_ROW_COUNT; i++) {
         brickMatrix[i] = [];

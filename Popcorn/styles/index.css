@@ -37,7 +37,7 @@ h1{
 }
 
 #wrapper button{
-    margin: 30px 10px 0 10px;
+    margin: 10px 10px 0 10px;
     padding: 10px 20px;
     background: transparent;
     border: none;
@@ -53,12 +53,13 @@ h1{
 }
 
 #liveScoreContainer{
-    width:120px;
-    height:60px;
+    width:350px;
+    padding: 5px 15px;
     border: 1px solid black;
     border-radius: 5px;
-    position:absolute;
-    top: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    top: 50px;
     left: 20px;
 }
 
