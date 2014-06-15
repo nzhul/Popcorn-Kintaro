@@ -61,6 +61,11 @@ h1{
     top: 10px;
     left: 20px;
 }
+
+#restart-game {
+    text-align:center;
+}
+
 /*.kineticjs-content {*/
     /*display: none !important;*/
 /*}*/

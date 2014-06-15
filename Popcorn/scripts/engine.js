@@ -132,6 +132,9 @@ function onStartBtnClick() {
     document.getElementById('container').addEventListener('click', onClickStartGame);
     var gameInstruction = document.getElementById('start-game-instruction');
     gameInstruction.style.display = 'block';
+    //Hide the label that indicates restart of the game
+    var restartGameLabel = document.getElementById('restart-game');
+    restartGameLabel.style.display = 'none';
 
     playerScore = 0;
 }

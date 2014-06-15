@@ -60,6 +60,9 @@ function ballHitWallDetection(ball) {
             if (isAnimationRunning) {
                 endGame();
                 gameOverText.animate(textAnimBigger);
+                //Add label to indicate restart of the game 
+                var restartGameLabel = document.getElementById('restart-game');
+                restartGameLabel.style.display = 'block';
             }
 
             var canvases = document.getElementsByTagName('canvas');
