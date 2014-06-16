@@ -131,12 +131,9 @@ var anim = new Kinetic.Animation(function (frame) {
     ballHitWallDetection(aBall);
     ballHitBrickDetection(aBall);
 
-<<<<<<< HEAD
-=======
     if (levelBrickCount == 0){
         gameWin();
     }
->>>>>>> 6af123226d47066cc3f16c392b08f3d95acde909
 }, layers, explosionsLayer); // !
 
 document.getElementById('start-btn').addEventListener('click', onStartBtnClick);
