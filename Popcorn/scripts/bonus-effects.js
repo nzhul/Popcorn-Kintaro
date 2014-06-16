@@ -40,6 +40,32 @@ document.addEventListener('click', function () {
             if (rightBullet.getY() < 0) {
                 rightBullet.remove();
             }
+
+            // TODO: Collision Detection for the bullets!
+            // Uncomment the code bellow and try to fix it if you can.
+            // There is a problem that occure when we hit the brick.
+            // After we hit the brick - our bullet is destroyed and in the next loop we try to
+            // get the Intersection of the same bullet that we previusly removed.
+            // That couses an error.
+
+            //var currentStage = rightBullet.getStage(),
+            //    collisionObject = currentStage.getIntersection({ x: rightBullet.getX(), y: rightBullet.getY() });
+
+            //if (collisionObject) {
+            //    if (collisionObject.getAttr('gameObjectType') == 'brick') {
+            //        rightBullet.remove();
+            //        levelBrickCount -= 1;
+            //        playerScore += 10;
+            //        updateScore();
+            //        if (collisionObject.getAttr('isObjectProducer')) {
+            //            var newGift = spawnGift(collisionObject.getAttr('x'), collisionObject.getAttr('y'), collisionObject.getAttr('fill'), collisionObject.getAttr('producedObjectType'));
+            //            var moveGiftDown = newGift.attrs.move;
+            //            moveGiftDown();
+            //        }
+            //        collisionObject.remove();
+            //    }
+            //}
+
         }, giftsLayer);
 
         var move1 = leftBullet.attrs.moveBullet;

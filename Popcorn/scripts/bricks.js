@@ -23,7 +23,7 @@ function initBricks() {
                 listening: true
             }).setAttrs({
                     isObjectProducer: (function () {
-                        if(getRandomInt(1, 100) > 10){
+                        if(getRandomInt(1, 100) > 20){
                             return true;
                         } else {
                             return false;
