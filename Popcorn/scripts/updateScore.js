@@ -1,14 +1,4 @@
-﻿var endGame = function () {
-    var currentName = prompt('Your socre is: '+ playerScore + '! Please enter your name:');
-    if (currentName === '') {
-        currentName = 'Anonymous';
-    }
-    else if (currentName === null) {
-        currentName = 'Anonymous';
-    }
-    localStorage.setItem(playerScore, currentName);
-    updateTopScores();
-}
+﻿
 var updateTopScores = function () {
     clearTopScores();
     var sortedScores = Object.keys(localStorage).sort(function (a, b) {
