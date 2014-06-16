@@ -28,10 +28,10 @@ var stage,
     LEFT_DOWN = false,
     BRICK_WIDTH = 40,
     BRICK_HEIGHT = 15,
-    BRICK_SPACING = 1,
+    BRICK_SPACING = 5,
     BRICK_COLOR = 'black',
     BRICK_ROW_COUNT = 5,
-    PRODUCIBLE_OBJECTS = [{name: 'ShootingPaddle', color: 'red'}];
+    PRODUCIBLE_OBJECTS = [{name: 'ShootingPaddle', color: 'yellowgreen'}];
 
     //PRODUCIBLE_OBJECTS = [{ name: 'ShootingPaddle', color: 'red' },
     //                      { name: 'LongerPaddle', color: 'yellowgreen' },

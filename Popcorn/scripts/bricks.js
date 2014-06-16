@@ -2,7 +2,7 @@ function initBricks() {
     var brickMatrix = [],
         i,
         j,
-        brickCount = STAGE_WIDTH / (BRICK_WIDTH + 2),
+        brickCount = STAGE_WIDTH / (BRICK_WIDTH + 2) - 1,
         currentBrick,
         verticalShift = 0,
         horizontalShift = 0;
@@ -18,6 +18,8 @@ function initBricks() {
                 width: BRICK_WIDTH,
                 height: BRICK_HEIGHT,
                 fill: BRICK_COLOR,
+                stroke: 'black',
+                strokeWidth: 1,
                 listening: true
             }).setAttrs({
                     isObjectProducer: (function () {
@@ -36,9 +38,9 @@ function initBricks() {
             }
             brickMatrix[i][j] = (currentBrick);
             bricksLayer.add(currentBrick);
-            horizontalShift += BRICK_WIDTH + 1;
+            horizontalShift += BRICK_WIDTH + 5;
         }
-        verticalShift += BRICK_HEIGHT + 1;
+        verticalShift += BRICK_HEIGHT + 5;
     }
     return brickMatrix;
 }
