@@ -30,8 +30,10 @@ var stage,
     BRICK_SPACING = 1,
     BRICK_COLOR = 'black',
     BRICK_ROW_COUNT = 5,
-    PRODUCIBLE_OBJECTS = [{name: 'ShootingPaddle', color: 'red'},
-                          {name:'LongerPaddle', color: 'yellowgreen' },
-                          {name:'MultipleBalls', color: 'green' },
-                          {name: 'FireBall', color: 'lightblue'},
-                          {name: 'BOMB', color:'lightgray'}];
+    PRODUCIBLE_OBJECTS = [{name: 'ShootingPaddle', color: 'red'}];
+
+    //PRODUCIBLE_OBJECTS = [{ name: 'ShootingPaddle', color: 'red' },
+    //                      { name: 'LongerPaddle', color: 'yellowgreen' },
+    //                      { name: 'MultipleBalls', color: 'green' },
+    //                      { name: 'FireBall', color: 'lightblue' },
+    //                      { name: 'BOMB', color: 'lightgray' }];

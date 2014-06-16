@@ -44,6 +44,14 @@ var aPaddle = new Kinetic.Rect({
     height: PADDLE_HEIGHT,
     fill: PADDLE_COLOR,
     listening: true
+}).setAttrs({
+    paddleType: { name: 'regular', color: 'black'}
+});
+
+document.addEventListener('click', function () {
+    if (aPaddle.getAttr('paddleType').name == 'ShootingPaddle') {
+
+    }
 });
 //var aPaddle = new Kinetic.Shape({
 //    sceneFunc: function(context) {
@@ -122,6 +130,7 @@ var anim = new Kinetic.Animation(function (frame) {
     aBall.move();
     ballHitWallDetection(aBall);
     ballHitBrickDetection(aBall);
+
 }, layers, explosionsLayer); // !
 
 document.getElementById('start-btn').addEventListener('click', onStartBtnClick);
