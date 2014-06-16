@@ -32,7 +32,9 @@ var aBall = new Kinetic.Circle({
     radius: BALL_RADIUS,
     fill: BALL_COLOR,
     directionX: DIRECTION_X,
-    directionY: DIRECTION_Y
+    directionY: DIRECTION_Y,
+    stroke: 'black',
+    strokeWidth: .5,
 }).setAttrs({
     type: 'regular'
 });
@@ -48,11 +50,6 @@ var aPaddle = new Kinetic.Rect({
     paddleType: { name: 'regular', color: 'black'}
 });
 
-document.addEventListener('click', function () {
-    if (aPaddle.getAttr('paddleType').name == 'ShootingPaddle') {
-
-    }
-});
 //var aPaddle = new Kinetic.Shape({
 //    sceneFunc: function(context) {
 //        context.beginPath();

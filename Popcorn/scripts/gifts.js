@@ -5,6 +5,8 @@ function spawnGift(x, y, color, type) {
             y: y + BRICK_HEIGHT / 2,
             radius: 5,
             fill: color,
+            stroke: 'black',
+            strokeWidth: .5,
             move: function () {
                 moveGiftDown.start();
             }
