@@ -35,6 +35,7 @@ function bulletHitBrickCollision(bullet) {
                 bullet.remove();
                 levelBrickCount -= 1;
                 playerScore += 10;
+                playSingleSound('explosionSound');
                 explode(bullet.getX(), bullet.getY());
                 updateScore();
                 if (collisionObject.getAttr('isObjectProducer')) {
