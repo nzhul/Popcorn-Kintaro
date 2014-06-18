@@ -19,9 +19,12 @@ function update(frmDelay) {
     }
 }
 
-function explode() {
-    var x = aBall.attrs.x;
-    var y = aBall.attrs.y;
+function explode(x, y) {
+    //make it work with passed x and y // default values - ball x and y 
+    x = typeof x !== 'undefined' ? x : aBall.attrs.x;
+    y = typeof y !== 'undefined' ? y : aBall.attrs.y;
+    //var x = aBall.attrs.x;
+    //var y = aBall.attrs.y;
 
     createExplosion(x, y, "#f0e307");
 

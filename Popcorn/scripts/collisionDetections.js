@@ -35,6 +35,7 @@ function bulletHitBrickCollision(bullet) {
                 bullet.remove();
                 levelBrickCount -= 1;
                 playerScore += 10;
+                explode(bullet.getX(), bullet.getY());
                 updateScore();
                 if (collisionObject.getAttr('isObjectProducer')) {
                     var newGift = spawnGift(collisionObject.getAttr('x'), collisionObject.getAttr('y'), collisionObject.getAttr('fill'), collisionObject.getAttr('producedObjectType'));
